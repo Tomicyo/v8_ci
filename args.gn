@@ -1,0 +1,5 @@
+is_component_build = true
+is_debug = false
+target_cpu="x64" 
+v8_target_cpu="x64" 
+use_goma=false

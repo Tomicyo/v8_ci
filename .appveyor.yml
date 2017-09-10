@@ -1,0 +1,16 @@
+
+environment:
+  DEPOT_TOOLS_WIN_TOOLCHAIN: 0
+  GYP_MSVS_VERSION: 2017
+  PATH: C:/projects/depot_tools;%PATH%
+  matrix:
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+
+build_script: v8_ci.bat nopause
+
+on_success:
+  - git config --global credential.helper store
+
+artifacts:
+  - path: v8\output
+    name: v8
