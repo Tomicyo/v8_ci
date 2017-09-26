@@ -1,0 +1,36 @@
+language: cpp
+matrix:
+  include:
+    - compiler: gcc
+      os: linux
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
+    - clang
+
+before_script:
+  - chmod +x v8_build.sh
+
+script:
+  - ./v8_build.sh
+
+branches:
+  only:
+    - master
+
+notifications:
+  email: false
+
+deploy:
+  provider: releases
+  api_key: "$GH_TOKEN"
+  file: "v8/artifacts/v8_linux.zip"
+  draft: true
+  skip_cleanup: true
+  on:
+tags: true
