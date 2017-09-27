@@ -1,4 +1,3 @@
-#!/usr/bin/bash
 DEPOT_DIR=`pwd`/depot_tools
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git $DEPOT_DIR
 export PATH=$PATH:$DEPOT_DIR:`pwd`/v8/buildtools/linux64
