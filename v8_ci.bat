@@ -1,6 +1,8 @@
 @echo off
 set DEPOT_DIR=%~dp0\..\depot_tools
 set PATH=%DEPOT_DIR%;%PATH%
+set DEPOT_TOOLS_WIN_TOOLCHAIN=0
+set GYP_MSVS_VERSION=2017
 if not exist %DEPOT_DIR% goto GetDepot
 goto GetV8
 :GetDepot
