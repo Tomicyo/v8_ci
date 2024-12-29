@@ -1,10 +1,10 @@
 
 environment:
   DEPOT_TOOLS_WIN_TOOLCHAIN: 0
-  GYP_MSVS_VERSION: 2019
+  GYP_MSVS_VERSION: 2022
   PATH: C:/projects/depot_tools;%PATH%
   matrix:
-    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2022
 
 build_script: v8_ci.bat nopause
 
